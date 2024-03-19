@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.0)
-project(tetris_csk)
+project(tetris_jhw)
 
 file(GLOB SRC_FILES "src/*.c")
 
-add_executable(tetris_csk ${SRC_FILES})
-target_include_directories(tetris_csk PUBLIC include)
+add_executable(tetris_jhw ${SRC_FILES})
+target_include_directories(tetris_jhw PUBLIC include)
 
-install(TARGETS tetris_csk DESTINATION /usr/local/bin)
+install(TARGETS tetris_jhw DESTINATION /usr/local/bin)
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/include/ DESTINATION /usr/local/include)
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/src/ DESTINATION /usr/local/src)
 

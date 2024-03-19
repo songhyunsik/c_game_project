@@ -13,6 +13,7 @@ int update(int signum);
 int x = 3;
 int y = 0;
 int point = 0;
+extern int tetris_table[21][10];
 
 int game_start()
 {
@@ -45,6 +46,7 @@ int main()
     {
     case 1:
         game = GAME_START;
+        init_tetris_table();
         menu = game_start();
         break;
     case 2:
@@ -58,4 +60,28 @@ int main()
         break;
     }
     return 0;
+}
+
+int init_tetris_table()
+{
+    int i, j;
+    // 모든 데이터에 0을 넣는다.
+    for (i = 0; i < 21; i++)
+    {
+        for (j = 0; j < 10; j++)
+        {
+            tetris_table[i][j] = 0;
+        }
+    }
+    // 맨 아래칸에 1 추가 (바닥)
+    for (j = 1; j < 9; j++)
+    {
+        tetris_table[20][j] = 1;
+    }
+    // 양 옆에 1 추가 (벽)
+    for (i = 0; i < 21; i++)
+    {
+        tetris_table[i][0] = 1;
+        tetris_table[i][9] = 1;
+    }
 }
