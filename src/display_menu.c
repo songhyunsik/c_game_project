@@ -15,7 +15,7 @@ int display_menu()
     printf("2. Search history\n");
     printf("3. Record Output\n");
     printf("4. Quit\n");
-
+ 
     scanf("%d", &menu);
     return menu;
 }

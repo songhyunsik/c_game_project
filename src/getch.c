@@ -1,4 +1,6 @@
-#include <termios.h>
+//키입력을 받기위한 함수이다.
+
+#include <termios.h> // Contains POSIX terminal control definitions
 #include <stdio.h>
 #include <unistd.h>
 
